@@ -2,6 +2,7 @@
 /* eslint-disable  no-console */
 
 const Alexa = require("ask-sdk");
+const { facts } = require("./facts");
 
 const FactIntentHandler = {
   canHandle(handlerInput) {
@@ -12,12 +13,6 @@ const FactIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const facts = [
-      "a group of jellyfish is called a smack",
-      "some other fact",
-      "the deepest point in the ocean is called challenger deep"
-    ];
-
     const fact = facts[Math.floor(Math.random() * facts.length)];
 
     return handlerInput.responseBuilder
