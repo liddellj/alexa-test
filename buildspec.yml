@@ -1,0 +1,26 @@
+# npm install
+# # npm test
+# package??
+
+# push to github
+
+# create codebuild project
+# might need to create bucket in same region
+# test build
+# SNS topic
+#   subscribe me and nick.todd@conygre.com
+# cloudwatch filter success|fail -> SNS topic
+# continuous deployment (use lambda)
+
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd lambda/custom && npm install
+  build:
+    commands:
+      - cd lambda/custom && npm run package
+artifacts:
+  files:
+    - lambda/custom/jimbo-facts.zip

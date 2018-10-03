@@ -1,10 +1,11 @@
 {
-  "name": "hello-world",
+  "name": "jimbo-facts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "pack-zip"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "ask-sdk": "^2.0.10",
     "ask-sdk-core": "^2.0.0",
     "ask-sdk-model": "^1.0.0"
+  },
+  "devDependencies": {
+    "pack-zip": "^0.2.2"
   }
 }
