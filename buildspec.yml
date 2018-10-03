@@ -20,7 +20,7 @@ phases:
       - cd lambda/custom && npm install
   build:
     commands:
-      - cd lambda/custom && npm run package
+      - npm run package
 artifacts:
   files:
     - lambda/custom/jimbo-facts.zip
